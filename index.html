@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Abhishek Kumar — Software Developer specialising in Java, React and Angular. Available for internships and collaborations." />
+  <meta name="author" content="Abhishek Kumar" />
+  <meta property="og:title" content="Abhishek Kumar — Software Developer" />
+  <meta property="og:description" content="Full-stack developer crafting scalable, user-centric web applications." />
+  <meta property="og:type" content="website" />
+  <title>Abhishek Kumar — Software Developer</title>
+
+  <!-- Zero-flash theme init -->
+  <script>!function(){document.documentElement.dataset.theme=localStorage.getItem('pf-theme')||'dark'}()</script>
+
+  <!-- Fonts: Unbounded (display) + DM Sans (body) + Fira Code (mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ╔══════════════════════════════════════╗
+     ║  CURSOR                             ║
+     ╚══════════════════════════════════════╝ -->
+<div id="cursor" aria-hidden="true"></div>
+
+<!-- ╔══════════════════════════════════════╗
+     ║  LOADER                             ║
+     ╚══════════════════════════════════════╝ -->
+<div id="loader" role="status" aria-label="Loading">
+  <div class="ldr-inner">
+    <div class="ldr-text" aria-hidden="true">
+      <span class="ldr-char" style="--ci:0">A</span><span class="ldr-char" style="--ci:1">b</span><span class="ldr-char" style="--ci:2">h</span><span class="ldr-char" style="--ci:3">i</span><span class="ldr-char" style="--ci:4">s</span><span class="ldr-char" style="--ci:5">h</span><span class="ldr-char" style="--ci:6">e</span><span class="ldr-char" style="--ci:7">k</span>
+    </div>
+    <div class="ldr-bar-wrap" aria-hidden="true"><div class="ldr-bar"></div></div>
+    <p class="ldr-sub">Loading portfolio<span class="ldr-dots"></span></p>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════╗
+     ║  NAVIGATION                         ║
+     ╚══════════════════════════════════════╝ -->
+<header id="site-header">
+  <div class="nav-shell">
+    <a href="#hero" class="nav-logo" aria-label="Abhishek Kumar — home">
+      <span class="logo-brace">{</span><span class="logo-init">AK</span><span class="logo-brace">}</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#about"          class="nav-a">About</a>
+      <a href="#skills"         class="nav-a">Skills</a>
+      <a href="#projects"       class="nav-a">Projects</a>
+      <a href="#experience"     class="nav-a">Experience</a>
+      <a href="#education"      class="nav-a">Education</a>
+      <a href="#certifications" class="nav-a">Certs</a>
+      <a href="#testimonials"   class="nav-a">Feedback</a>
+      <a href="#contact"        class="nav-a">Contact</a>
+    </nav>
+
+    <div class="nav-end">
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+        <i class="ph-bold ph-sun-dim" id="theme-ico"></i>
+      </button>
+      <a href="#contact" class="pill-cta">Hire Me <i class="ph-bold ph-arrow-up-right" aria-hidden="true"></i></a>
+      <button id="nav-toggle" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-rule" id="nav-rule" aria-hidden="true"></div>
+</header>
+
+<!-- Mobile slide menu -->
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+  <div class="mm-body">
+    <nav aria-label="Mobile navigation">
+      <a href="#about"          class="mm-link" style="--mi:0">About</a>
+      <a href="#skills"         class="mm-link" style="--mi:1">Skills</a>
+      <a href="#projects"       class="mm-link" style="--mi:2">Projects</a>
+      <a href="#experience"     class="mm-link" style="--mi:3">Experience</a>
+      <a href="#education"      class="mm-link" style="--mi:4">Education</a>
+      <a href="#certifications" class="mm-link" style="--mi:5">Certifications</a>
+      <a href="#testimonials"   class="mm-link" style="--mi:6">Feedback</a>
+      <a href="#contact"        class="mm-link" style="--mi:7">Contact</a>
+    </nav>
+    <div class="mm-footer">
+      <a href="https://github.com/abhishekkumar"   target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub"><i class="ph-bold ph-github-logo"></i></a>
+      <a href="https://linkedin.com/in/abhishekkumar" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a>
+      <a href="mailto:abhishekkumar@email.com" class="icon-btn" aria-label="Email"><i class="ph-bold ph-envelope"></i></a>
+    </div>
+  </div>
+</div>
+
+<main id="main" tabindex="-1">
+
+<!-- ╔══════════════════════════════════════╗
+     ║  §1  HERO                           ║
+     ╚══════════════════════════════════════╝ -->
+<section id="hero" class="hero-section">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+  <div class="hero-main container">
+    <!-- Availability chip -->
+    <div class="avail-chip reveal-fade" style="--rd:.1s">
+      <span class="avail-dot" aria-hidden="true"></span>
+      <span>Open to opportunities</span>
+    </div>
+
+    <!-- Giant name -->
+    <h1 class="hero-heading" aria-label="Abhishek Kumar">
+      <span class="hero-word" style="--wi:0" aria-hidden="true">Abhishek</span>
+      <span class="hero-word hero-word-out" style="--wi:1" aria-hidden="true">Kumar</span>
+    </h1>
+
+    <!-- Role ticker -->
+    <div class="hero-ticker" aria-live="polite">
+      <span class="ticker-line" aria-hidden="true">—</span>
+      <span id="ticker-text"></span><span class="ticker-cur" aria-hidden="true">█</span>
+    </div>
+
+    <!-- Tagline -->
+    <p class="hero-tagline reveal-fade" style="--rd:.9s">
+      Crafting scalable, user-centric web applications<br class="hide-sm">
+      that bridge elegant design with robust engineering.
+    </p>
+
+    <!-- CTAs -->
+    <div class="hero-ctas reveal-fade" style="--rd:1.05s">
+      <a href="#projects" class="btn btn-lime" data-mag>
+        <i class="ph-bold ph-squares-four" aria-hidden="true"></i>
+        View Projects
+      </a>
+      <a href="#contact" class="btn btn-ghost" data-mag>
+        <i class="ph-bold ph-paper-plane-tilt" aria-hidden="true"></i>
+        Say Hello
+      </a>
+    </div>
+
+    <!-- Stats row -->
+    <div class="hero-stats reveal-fade" style="--rd:1.2s" aria-label="Quick stats">
+      <div class="stat-item">
+        <b class="stat-num" data-target="3">0</b><span class="stat-plus">+</span>
+        <span class="stat-label">Projects</span>
+      </div>
+      <div class="stat-sep" aria-hidden="true"></div>
+      <div class="stat-item">
+        <b class="stat-num" data-target="10">0</b><span class="stat-plus">+</span>
+        <span class="stat-label">Technologies</span>
+      </div>
+      <div class="stat-sep" aria-hidden="true"></div>
+      <div class="stat-item">
+        <b class="stat-num" data-target="4">0</b><span class="stat-plus">+</span>
+        <span class="stat-label">Certifications</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Marquee strip -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Java</span><span class="m-dot">✦</span>
+      <span>React</span><span class="m-dot">✦</span>
+      <span>Angular</span><span class="m-dot">✦</span>
+      <span>Node.js</span><span class="m-dot">✦</span>
+      <span>Firebase</span><span class="m-dot">✦</span>
+      <span>Git</span><span class="m-dot">✦</span>
+      <span>HTML5</span><span class="m-dot">✦</span>
+      <span>CSS3</span><span class="m-dot">✦</span>
+      <span>SQL</span><span class="m-dot">✦</span>
+      <span>Figma</span><span class="m-dot">✦</span>
+      <!-- Duplicate for seamless loop -->
+      <span>Java</span><span class="m-dot">✦</span>
+      <span>React</span><span class="m-dot">✦</span>
+      <span>Angular</span><span class="m-dot">✦</span>
+      <span>Node.js</span><span class="m-dot">✦</span>
+      <span>Firebase</span><span class="m-dot">✦</span>
+      <span>Git</span><span class="m-dot">✦</span>
+      <span>HTML5</span><span class="m-dot">✦</span>
+      <span>CSS3</span><span class="m-dot">✦</span>
+      <span>SQL</span><span class="m-dot">✦</span>
+      <span>Figma</span><span class="m-dot">✦</span>
+    </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="scroll-hint" aria-hidden="true">
+    <div class="sh-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════╗
+     ║  §2  ABOUT                          ║
+     ╚══════════════════════════════════════╝ -->
+<section id="about" class="section about-sec">
+  <div class="container">
+    <div class="section-tag reveal-up">
+      <span class="tag-num">01</span>
+      <span class="tag-slash" aria-hidden="true">/</span>
+      <span class="tag-name">About</span>
+    </div>
+
+    <div class="about-layout">
+      <!-- Left: big philosophy quote -->
+      <div class="about-left reveal-up" style="--rd:.05s">
+        <div class="about-avatar-wrap">
+          <div class="about-avatar">
+            <span class="av-letters" aria-label="Initials: AK">AK</span>
+            <div class="av-ring r1" aria-hidden="true"></div>
+            <div class="av-ring r2" aria-hidden="true"></div>
+          </div>
+          <!-- Floating badges -->
+          <div class="av-float af1" aria-hidden="true"><i class="ph-bold ph-coffee"></i>Java</div>
+          <div class="av-float af2" aria-hidden="true"><i class="ph-bold ph-atom"></i>React</div>
+          <div class="av-float af3" aria-hidden="true"><i class="ph-bold ph-lightning"></i>Angular</div>
+          <div class="av-float af4" aria-hidden="true"><i class="ph-bold ph-fire"></i>Firebase</div>
+        </div>
+
+        <blockquote class="about-quote" aria-hidden="true">
+          <p>"Code is<br>craft.<br>Empathy<br>is design."</p>
+        </blockquote>
+      </div>
+
+      <!-- Right: text -->
+      <div class="about-right reveal-up" style="--rd:.15s">
+        <h2 class="sec-heading">About <em>Me</em></h2>
+
+        <p class="about-lead">I'm a passionate CSE student on a mission to build meaningful software that makes people's lives easier.</p>
+
+        <p class="about-body">Currently pursuing my B.Tech at <strong>Centurion University</strong>, I work across full-stack development — Java backends, RESTful APIs, React and Angular frontends. Freelance work has sharpened my instinct for clean code and great UX at the same time.</p>
+
+        <ul class="fact-list" role="list">
+          <li role="listitem">
+            <span class="fact-ico"><i class="ph-bold ph-graduation-cap" aria-hidden="true"></i></span>
+            B.Tech CSE — Centurion University (2027)
+          </li>
+          <li role="listitem">
+            <span class="fact-ico"><i class="ph-bold ph-map-pin-line" aria-hidden="true"></i></span>
+            Based in Odisha, India
+          </li>
+          <li role="listitem">
+            <span class="fact-ico"><i class="ph-bold ph-briefcase" aria-hidden="true"></i></span>
+            Freelance Web Developer · 2026–Present
+          </li>
+          <li role="listitem">
+            <span class="fact-ico"><i class="ph-bold ph-code" aria-hidden="true"></i></span>
+            Open-source contributor
+          </li>
+        </ul>
+
+        <div class="about-actions">
+          <a href="./assets/Resume.pdf" class="btn btn-lime" data-mag>
+            <i class="ph-bold ph-download-simple" aria-hidden="true"></i>Download CV
+          </a>
+          <a href="#contact" class="btn btn-text">
+            Let's talk <i class="ph-bold ph-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════╗
+     ║  §3  SKILLS                         ║
+     ╚══════════════════════════════════════╝ -->
+<section id="skills" class="section skills-sec">
+  <div class="container">
+    <div class="section-tag reveal-up">
+      <span class="tag-num">02</span>
+      <span class="tag-slash" aria-hidden="true">/</span>
+      <span class="tag-name">Skills</span>
+    </div>
+
+    <div class="skills-header reveal-up" style="--rd:.05s">
+      <h2 class="sec-heading">Technical <em>Arsenal</em></h2>
+      <p class="sec-sub">Languages, frameworks, and tools I reach for every day</p>
+    </div>
+
+    <div class="skills-grid">
+      <!-- Languages column -->
+      <div class="skill-col reveal-up" style="--rd:.08s">
+        <h3 class="skill-col-title">
+          <i class="ph-bold ph-terminal-window" aria-hidden="true"></i>
+          Languages
+        </h3>
+        <div class="skill-bars" role="list">
+          <div class="sk-row" role="listitem" data-pct="85">
+            <span class="sk-name">Java</span>
+            <div class="sk-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Java — 85%">
+              <div class="sk-fill"></div>
+            </div>
+            <span class="sk-val">85</span>
+          </div>
+          <div class="sk-row" role="listitem" data-pct="82">
+            <span class="sk-name">JavaScript</span>
+            <div class="sk-track" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript — 82%">
+              <div class="sk-fill"></div>
+            </div>
+            <span class="sk-val">82</span>
+          </div>
+          <div class="sk-row" role="listitem" data-pct="70">
+            <span class="sk-name">Python</span>
+            <div class="sk-track" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Python — 70%">
+              <div class="sk-fill"></div>
+            </div>
+            <span class="sk-val">70</span>
+          </div>
+          <div class="sk-row" role="listitem" data-pct="92">
+            <span class="sk-name">HTML5</span>
+            <div class="sk-track" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 — 92%">
+              <div class="sk-fill"></div>
+            </div>
+            <span class="sk-val">92</span>
+          </div>
+          <div class="sk-row" role="listitem" data-pct="88">
+            <span class="sk-name">CSS3</span>
+            <div class="sk-track" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 — 88%">
+              <div class="sk-fill"></div>
+            </div>
+            <span class="sk-val">88</span>
+          </div>
+          <div class="sk-row" role="listitem" data-pct="75">
+            <span class="sk-name">SQL</span>
+            <div class="sk-track" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="SQL — 75%">
+              <div class="sk-fill"></div>
+            </div>
+            <span class="sk-val">75</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frameworks + Tools column -->
+      <div class="skill-col right-col">
+        <div class="reveal-up" style="--rd:.12s">
+          <h3 class="skill-col-title">
+            <i class="ph-bold ph-stack" aria-hidden="true"></i>
+            Frameworks
+          </h3>
+          <div class="tag-cloud" role="list">
+            <span class="tag-chip chip-xl" role="listitem"><i class="ph-bold ph-angular-logo" aria-hidden="true"></i>Angular</span>
+            <span class="tag-chip chip-xl" role="listitem"><i class="ph-bold ph-atom" aria-hidden="true"></i>React.js</span>
+            <span class="tag-chip chip-lg" role="listitem"><i class="ph-bold ph-tree-structure" aria-hidden="true"></i>Node.js</span>
+            <span class="tag-chip chip-lg" role="listitem"><i class="ph-bold ph-traffic-signal" aria-hidden="true"></i>Express.js</span>
+          </div>
+        </div>
+
+        <div class="reveal-up" style="--rd:.18s">
+          <h3 class="skill-col-title">
+            <i class="ph-bold ph-wrench" aria-hidden="true"></i>
+            Tools
+          </h3>
+          <div class="tag-cloud" role="list">
+            <span class="tag-chip" role="listitem"><i class="ph-bold ph-git-branch" aria-hidden="true"></i>Git</span>
+            <span class="tag-chip" role="listitem"><i class="ph-bold ph-github-logo" aria-hidden="true"></i>GitHub</span>
+            <span class="tag-chip chip-lg" role="listitem"><i class="ph-bold ph-fire" aria-hidden="true"></i>Firebase</span>
+            <span class="tag-chip" role="listitem"><i class="ph-bold ph-paper-plane-tilt" aria-hidden="true"></i>Postman</span>
+            <span class="tag-chip chip-lg" role="listitem"><i class="ph-bold ph-figma-logo" aria-hidden="true"></i>Figma</span>
+            <span class="tag-chip" role="listitem"><i class="ph-bold ph-code-simple" aria-hidden="true"></i>VS Code</span>
+            <span class="tag-chip" role="listitem"><i class="ph-bold ph-paint-brush" aria-hidden="true"></i>Canva</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════╗
+     ║  §4  PROJECTS                       ║
+     ╚══════════════════════════════════════╝ -->
+<section id="projects" class="section projects-sec">
+  <div class="container">
+    <div class="section-tag reveal-up">
+      <span class="tag-num">03</span>
+      <span class="tag-slash" aria-hidden="true">/</span>
+      <span class="tag-name">Projects</span>
+    </div>
+
+    <div class="proj-header reveal-up" style="--rd:.05s">
+      <h2 class="sec-heading">Featured <em>Work</em></h2>
+      <p class="sec-sub">Real applications built for real people</p>
+    </div>
+
+    <!-- Alternating project rows -->
+    <article class="proj-row reveal-up" style="--rd:.08s" aria-labelledby="p1-title">
+      <div class="proj-mockup pm-lf" aria-hidden="true">
+        <div class="pm-chrome">
+          <div class="pm-dots"><span></span><span></span><span></span></div>
+          <span class="pm-url">campus-lost&found-portal.in</span>
+        </div>
+        <div class="pm-screen">
+          <div class="pm-sidebar">
+            <div class="pms-item active"></div>
+            <div class="pms-item"></div>
+            <div class="pms-item"></div>
+          </div>
+          <div class="pm-main">
+            <div class="pm-bar"></div>
+            <div class="pm-cards">
+              <div class="pm-card featured"></div>
+              <div class="pm-card"></div>
+              <div class="pm-card"></div>
+              <div class="pm-card"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-info">
+        <div class="proj-top">
+          <span class="proj-num" aria-hidden="true">01</span>
+          <div class="proj-ext-links">
+            <a href="https://campus-lost-and-found-portal.netlify.app/" class="ext-btn" aria-label="Live demo — Campus Lost &amp; Found"><i class="ph-bold ph-arrow-square-out"></i></a>
+            <a href="https://github.com/abhi-gif488/Lost-Found" class="ext-btn" aria-label="GitHub — Campus Lost &amp; Found"><i class="ph-bold ph-github-logo"></i></a>
+          </div>
+        </div>
+        <h3 id="p1-title" class="proj-title">Campus Lost &amp; Found Portal</h3>
+        <p class="proj-desc">A platform where students report and recover lost belongings — with Firebase authentication, Cloudinary image uploads, and a live management dashboard.</p>
+        <ul class="proj-features" aria-label="Key features">
+          <li><i class="ph-bold ph-check-circle" aria-hidden="true"></i>Post and search items with photos</li>
+          <li><i class="ph-bold ph-check-circle" aria-hidden="true"></i>Firebase Auth + Cloudinary CDN</li>
+          <li><i class="ph-bold ph-check-circle" aria-hidden="true"></i>Real-time dashboard tracking</li>
+        </ul>
+        <div class="proj-stack" aria-label="Tech stack">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase</span><span>Cloudinary</span>
+        </div>
+        <div class="proj-btns">
+          <a href="https://campus-lost-and-found-portal.netlify.app/" class="btn btn-lime btn-sm" data-mag>
+            <i class="ph-bold ph-play" aria-hidden="true"></i>Live Demo
+          </a>
+          <a href="https://github.com/abhi-gif488/Lost-Found" class="btn btn-ghost btn-sm">
+            <i class="ph-bold ph-github-logo" aria-hidden="true"></i>GitHub
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj-row proj-row-rev reveal-up" style="--rd:.05s" aria-labelledby="p2-title">
+      <div class="proj-mockup pm-rst" aria-hidden="true">
+        <div class="pm-chrome">
+          <div class="pm-dots"><span></span><span></span><span></span></div>
+          <span class="pm-url">openkitchen.in</span>
+        </div>
+        <div class="pm-screen">
+          <div class="pm-hero-banner"></div>
+          <div class="pm-menu-tabs">
+            <div class="pm-tab active"></div>
+            <div class="pm-tab"></div>
+            <div class="pm-tab"></div>
+          </div>
+          <div class="pm-items">
+            <div class="pm-item"></div>
+            <div class="pm-item"></div>
+            <div class="pm-item"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-info">
+        <div class="proj-top">
+          <span class="proj-num" aria-hidden="true">02</span>
+          <a href="https://0penkitchen.netlify.app/" class="ext-btn" aria-label="Live demo — OpenKitchen"><i class="ph-bold ph-arrow-square-out"></i></a>
+        </div>
+        <h3 id="p2-title" class="proj-title">OpenKitchen Restaurant</h3>
+        <p class="proj-desc">A polished, mobile-first restaurant website for a real client — full menu display, Google Maps integration, and a responsive layout that converts.</p>
+        <ul class="proj-features" aria-label="Key features">
+          <li><i class="ph-bold ph-check-circle" aria-hidden="true"></i>Categorised menu with photo gallery</li>
+          <li><i class="ph-bold ph-check-circle" aria-hidden="true"></i>Google Maps + contact form</li>
+          <li><i class="ph-bold ph-check-circle" aria-hidden="true"></i>100% mobile-first responsive</li>
+        </ul>
+        <div class="proj-stack" aria-label="Tech stack">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Google Maps API</span>
+        </div>
+        <div class="proj-btns">
+          <a href="https://0penkitchen.netlify.app/" class="btn btn-lime btn-sm" data-mag>
+            <i class="ph-bold ph-play" aria-hidden="true"></i>Live Demo
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj-row reveal-up" style="--rd:.05s" aria-labelledby="p3-title">
+      <div class="proj-mockup pm-dash" aria-hidden="true">
+        <div class="pm-chrome">
+          <div class="pm-dots"><span></span><span></span><span></span></div>
+          <span class="pm-url">my-dashboard.app</span>
+        </div>
+        <div class="pm-screen">
+          <div class="pm-dash-grid">
+            <div class="pm-widget accent"><div class="pm-w-inner"></div></div>
+            <div class="pm-widget"><div class="pm-w-inner"></div></div>
+            <div class="pm-widget"><div class="pm-w-inner"></div></div>
+            <div class="pm-widget wide"><div class="pm-w-inner"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-info">
+        <div class="proj-top">
+          <span class="proj-num" aria-hidden="true">03</span>
+          <div class="proj-ext-links">
+            <a href="https://personal-das.netlify.app/" class="ext-btn" aria-label="Live demo — Personal Dashboard"><i class="ph-bold ph-arrow-square-out"></i></a>
+            <a href="https://github.com/abhi-gif488/psychic-giggle" class="ext-btn" aria-label="GitHub — Personal Dashboard"><i class="ph-bold ph-github-logo"></i></a>
+          </div>
+        </div>
+        <h3 id="p3-title" class="proj-title">Personal Dashboard App</h3>
+        <p class="proj-desc">A productivity command-centre — to-do list, live weather widget, and a notes tracker, all saved to localStorage with zero backend.</p>
+        <ul class="proj-features" aria-label="Key features">
+          <li><i class="ph-bold ph-check-circle" aria-hidden="true"></i>To-do list with localStorage</li>
+          <li><i class="ph-bold ph-check-circle" aria-hidden="true"></i>Live weather via public API</li>
+          <li><i class="ph-bold ph-check-circle" aria-hidden="true"></i>Notes and goals tracker</li>
+        </ul>
+        <div class="proj-stack" aria-label="Tech stack">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Weather API</span>
+        </div>
+        <div class="proj-btns">
+          <a href="https://personal-das.netlify.app/" class="btn btn-lime btn-sm" data-mag>
+            <i class="ph-bold ph-play" aria-hidden="true"></i>Live Demo
+          </a>
+          <a href="https://github.com/abhi-gif488/psychic-giggle" class="btn btn-ghost btn-sm">
+            <i class="ph-bold ph-github-logo" aria-hidden="true"></i>GitHub
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════╗
+     ║  §5  EXPERIENCE                     ║
+     ╚══════════════════════════════════════╝ -->
+<section id="experience" class="section exp-sec">
+  <div class="container">
+    <div class="section-tag reveal-up">
+      <span class="tag-num">04</span>
+      <span class="tag-slash" aria-hidden="true">/</span>
+      <span class="tag-name">Experience</span>
+    </div>
+    <h2 class="sec-heading reveal-up" style="--rd:.05s">Work <em>Experience</em></h2>
+<div class="exp-card reveal-up" style="--rd:.1s">
+  <div class="exp-accent" aria-hidden="true"></div>
+  <div class="exp-body">
+    
+    <div class="exp-left">
+      <div class="exp-icon" aria-hidden="true">
+        <i class="ph-bold ph-briefcase"></i>
+      </div>
+    </div>
+
+    <div class="exp-right">
+      
+      <div class="exp-header">
+        <div>
+          <h3 class="exp-role">Web Development Intern</h3>
+          <p class="exp-org">Prodigy InfoTech · Remote Internship</p>
+        </div>
+
+        <span class="exp-date">
+          <i class="ph-bold ph-calendar-blank" aria-hidden="true"></i>
+          Internship
+        </span>
+      </div>
+
+      <p class="exp-desc">
+        Completed a Web Development Internship at <strong>Prodigy InfoTech</strong>, where I built responsive web applications and improved my frontend development skills. 
+        Worked on real-world tasks including designing interactive user interfaces, implementing responsive layouts, and developing functional web features using modern web technologies.
+      </p>
+
+      <div class="exp-tags" aria-label="Skills used">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>Responsive Design</span>
+        <span>Frontend Development</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+    <br>
+
+       <div class="exp-card reveal-up" style="--rd:.1s">
+      <div class="exp-accent" aria-hidden="true"></div>
+      <div class="exp-body">
+        <div class="exp-left">
+          <div class="exp-icon" aria-hidden="true"><i class="ph-bold ph-briefcase"></i></div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-role">Freelance Web Developer</h3>
+              <p class="exp-org">Self-employed · Remote</p>
+            </div>
+            <span class="exp-date">
+              <i class="ph-bold ph-calendar-blank" aria-hidden="true"></i>
+              2026 — Present
+            </span>
+          </div>
+          <p class="exp-desc">Partnered with clients to design and deploy production-ready websites — most notably the <strong>OpenKitchen</strong> restaurant project. Handled everything from wireframing to launch: responsive layouts, form integration, Maps API, and hosting.</p>
+          <div class="exp-tags" aria-label="Skills used">
+            <span>HTML/CSS</span>
+            <span>JavaScript</span>
+            <span>Client Communication</span>
+            <span>Responsive Design</span>
+            <span>Deployment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════╗
+     ║  §6  EDUCATION                      ║
+     ╚══════════════════════════════════════╝ -->
+<section id="education" class="section edu-sec">
+  <div class="container">
+    <div class="section-tag reveal-up">
+      <span class="tag-num">05</span>
+      <span class="tag-slash" aria-hidden="true">/</span>
+      <span class="tag-name">Education</span>
+    </div>
+    <h2 class="sec-heading reveal-up" style="--rd:.05s">Academic <em>Background</em></h2>
+
+    <div class="edu-card reveal-up" style="--rd:.1s">
+      <div class="edu-stripe" aria-hidden="true"></div>
+      <div class="edu-inner">
+        <div class="edu-icon-wrap" aria-hidden="true">
+          <i class="ph-bold ph-graduation-cap"></i>
+        </div>
+        <div class="edu-body">
+          <div class="edu-header">
+            <div>
+              <h3 class="edu-degree">Bachelor of Technology</h3>
+              <p class="edu-field">Computer Science &amp; Engineering</p>
+            </div>
+            <span class="edu-badge">Expected 2027</span>
+          </div>
+          <p class="edu-uni"><i class="ph-bold ph-building-columns" aria-hidden="true"></i>Centurion University of Technology and Management</p>
+          <p class="edu-desc">Core coursework in data structures, algorithms, OS, DBMS, software engineering, and web technologies. Active in coding competitions and collaborative project work.</p>
+          <div class="edu-tags" aria-label="Key subjects">
+            <span>DSA</span><span>Algorithms</span><span>DBMS</span><span>OS</span><span>Web Tech</span><span>OOP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+        <div class="edu-card reveal-up" style="--rd:.1s">
+      <div class="edu-stripe" aria-hidden="true"></div>
+      <div class="edu-inner">
+        <div class="edu-icon-wrap" aria-hidden="true">
+          <i class="ph-bold ph-graduation-cap"></i>
+        </div>
+        <div class="edu-body">
+          <div class="edu-header">
+            <div>
+               <h3 class="edu-degree">Higher Secondary Education (Class 12)</h3>
+              <p class="edu-field">Stream: Science (Physics, Chemistry, Mathematics)</p>
+            </div>
+            <span class="edu-badge">Completed 2023</span>
+          </div>
+          <p class="edu-uni"><i class="ph-bold ph-building-columns" aria-hidden="true"></i>D.A.V Nageshwar Public School</p>
+          <p class="edu-desc">Completed higher secondary education with a Science stream (Physics, Chemistry, Mathematics), building a strong analytical and problem-solving foundation. Actively engaged in mathematics and logical reasoning subjects, which developed interest in technology and programming.</p>
+        </div>
+      </div>
+    </div>
+    <br>
+
+        <div class="edu-card reveal-up" style="--rd:.1s">
+      <div class="edu-stripe" aria-hidden="true"></div>
+      <div class="edu-inner">
+        <div class="edu-icon-wrap" aria-hidden="true">
+          <i class="ph-bold ph-graduation-cap"></i>
+        </div>
+        <div class="edu-body">
+          <div class="edu-header">
+            <div>
+              <h3 class="edu-degree">Secondary Education (Class 10)  </h3>
+              <p class="edu-field">Completed foundational studies with focus on Science and Mathematics.</p>
+            </div>
+            <span class="edu-badge">Completed 2020</span>
+          </div>
+          <p class="edu-uni"><i class="ph-bold ph-building-columns" aria-hidden="true"></i>D.A.V Nageshwar Public School</p>
+          <p class="edu-desc">Completed secondary education with excellent academic performance, strengthening fundamentals in mathematics, science, and logical thinking. Developed strong discipline, learning habits, and curiosity toward technology and problem solving.</p>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════╗
+     ║  §7  CERTIFICATIONS                 ║
+     ╚══════════════════════════════════════╝ -->
+<section id="certifications" class="section certs-sec">
+  <div class="container">
+    <div class="section-tag reveal-up">
+      <span class="tag-num">06</span>
+      <span class="tag-slash" aria-hidden="true">/</span>
+      <span class="tag-name">Certifications</span>
+    </div>
+    <div class="certs-top reveal-up" style="--rd:.05s">
+      <h2 class="sec-heading">Earned <em>Credentials</em></h2>
+      <div class="cert-nav-btns" aria-label="Carousel navigation">
+        <button class="icon-btn" id="cert-prev" aria-label="Previous"><i class="ph-bold ph-arrow-left"></i></button>
+        <button class="icon-btn" id="cert-next" aria-label="Next"><i class="ph-bold ph-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="certs-outer" role="region" aria-label="Certifications">
+    <div class="certs-track" id="certs-track">
+      <div class="cert-card" role="article">
+        <div class="cert-glyph" aria-hidden="true"><i class="ph-bold ph-brain"></i></div>
+        <h3 class="cert-name">AI Impact Summit</h3>
+        <p class="cert-issuer">IIT Bombay</p>
+        <span class="cert-badge">Artificial Intelligence</span>
+        <div class="cert-glint" aria-hidden="true"></div>
+      </div>
+      <div class="cert-card" role="article">
+        <div class="cert-glyph" aria-hidden="true"><i class="ph-bold ph-robot"></i></div>
+        <h3 class="cert-name">ChatGPT for Project Management</h3>
+        <p class="cert-issuer">ChatGPT Certification</p>
+        <span class="cert-badge">AI / Productivity</span>
+        <div class="cert-glint" aria-hidden="true"></div>
+      </div>
+      <div class="cert-card" role="article">
+        <div class="cert-glyph" aria-hidden="true"><i class="ph-bold ph-table"></i></div>
+        <h3 class="cert-name">Master Microsoft Excel</h3>
+        <p class="cert-issuer">LinkedIn Certification</p>
+        <span class="cert-badge">Data &amp; Analytics</span>
+        <div class="cert-glint" aria-hidden="true"></div>
+      </div>
+      <div class="cert-card" role="article">
+        <div class="cert-glyph" aria-hidden="true"><i class="ph-bold ph-chat-centered-text"></i></div>
+        <h3 class="cert-name">Communication Skills</h3>
+        <p class="cert-issuer">TCS — Tata Consultancy Services</p>
+        <span class="cert-badge">Professional Skills</span>
+        <div class="cert-glint" aria-hidden="true"></div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════╗
+     ║  §8  TESTIMONIALS + FEEDBACK        ║
+     ╚══════════════════════════════════════╝ -->
+<section id="testimonials" class="section testi-sec">
+  <div class="container">
+    <div class="section-tag reveal-up">
+      <span class="tag-num">07</span>
+      <span class="tag-slash" aria-hidden="true">/</span>
+      <span class="tag-name">Feedback</span>
+    </div>
+    <h2 class="sec-heading reveal-up" style="--rd:.05s">What <em>People Say</em></h2>
+
+    <div class="testi-layout">
+      <!-- Testimonial cards -->
+      <div class="testi-stack">
+        <div class="testi-card reveal-up" style="--rd:.06s">
+          <div class="tq-open" aria-hidden="true">"</div>
+          <p>Abhishek delivered the restaurant website ahead of schedule and the quality exceeded my expectations. He understood our brand vision immediately.</p>
+          <div class="tq-author">
+            <div class="tq-av" aria-hidden="true">RS</div>
+            <div>
+              <strong>Rajesh Sharma</strong>
+              <span>Owner, OpenKitchen Restaurant</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card reveal-up" style="--rd:.12s">
+          <div class="tq-open" aria-hidden="true">"</div>
+          <p>Incredible problem-solving skills and sharp attention to detail. The Lost &amp; Found portal genuinely helped students on our campus recover their belongings.</p>
+          <div class="tq-author">
+            <div class="tq-av" aria-hidden="true">PM</div>
+            <div>
+              <strong>Prof. P. Mahapatra</strong>
+              <span>Faculty, Centurion University</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feedback form -->
+      <div class="feedback-panel reveal-up" style="--rd:.1s">
+        <h3 class="panel-heading">Leave Feedback</h3>
+        <form id="fb-form" novalidate aria-label="Feedback form">
+          <div class="field">
+            <label for="fb-name">Name</label>
+            <div class="field-wrap">
+              <i class="ph-bold ph-user" aria-hidden="true"></i>
+              <input type="text" id="fb-name" name="name" placeholder="Your name" required autocomplete="name" />
+            </div>
+            <span class="field-err" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="fb-email">Email</label>
+            <div class="field-wrap">
+              <i class="ph-bold ph-envelope" aria-hidden="true"></i>
+              <input type="email" id="fb-email" name="email" placeholder="you@email.com" required autocomplete="email" />
+            </div>
+            <span class="field-err" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="fb-msg">Message</label>
+            <div class="field-wrap field-wrap-ta">
+              <i class="ph-bold ph-chat-text" aria-hidden="true"></i>
+              <textarea id="fb-msg" name="message" rows="4" placeholder="Share your thoughts…" required></textarea>
+            </div>
+            <span class="field-err" role="alert"></span>
+          </div>
+          <button type="submit" class="btn btn-lime btn-full" id="fb-submit">
+            <i class="ph-bold ph-paper-plane-tilt" aria-hidden="true"></i>
+            <span>Send Feedback</span>
+          </button>
+          <div class="form-ok" id="fb-ok" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════╗
+     ║  §9  CONTACT                        ║
+     ╚══════════════════════════════════════╝ -->
+<section id="contact" class="section contact-sec">
+  <div class="container">
+    <div class="section-tag reveal-up">
+      <span class="tag-num">08</span>
+      <span class="tag-slash" aria-hidden="true">/</span>
+      <span class="tag-name">Contact</span>
+    </div>
+
+    <div class="contact-layout">
+      <!-- Left -->
+      <div class="contact-left reveal-up" style="--rd:.05s">
+        <h2 class="contact-headline">
+          Let's <em>Build</em><br>Something<br>Together.
+        </h2>
+        <p class="contact-sub">Open to internships, freelance projects, and full-time roles. Drop me a line.</p>
+
+        <div class="contact-links" role="list">
+          <a href="mailto:abhishekkumar06204@email.com" class="clink" role="listitem">
+            <span class="clink-icon"><i class="ph-bold ph-envelope" aria-hidden="true"></i></span>
+            <span class="clink-label">Email</span>
+            <span class="clink-val">abhishekkumar06204@gmail.com</span>
+          </a>
+          <a href="https://github.com/abhi-gif488" target="_blank" rel="noopener noreferrer" class="clink" role="listitem">
+            <span class="clink-icon"><i class="ph-bold ph-github-logo" aria-hidden="true"></i></span>
+            <span class="clink-label">GitHub</span>
+            <span class="clink-val">github.com/abhishekkumar</span>
+          </a>
+          <a href="https://www.linkedin.com/in/abhishek-kumar-775bb92ba/" target="_blank" rel="noopener noreferrer" class="clink" role="listitem">
+            <span class="clink-icon"><i class="ph-bold ph-linkedin-logo" aria-hidden="true"></i></span>
+            <span class="clink-label">LinkedIn</span>
+            <span class="clink-val">linkedin.com/in/abhishekkumar</span>
+          </a>
+          <div class="clink" role="listitem">
+            <span class="clink-icon"><i class="ph-bold ph-map-pin-line" aria-hidden="true"></i></span>
+            <span class="clink-label">Location</span>
+            <span class="clink-val">Odisha, India</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="contact-right reveal-up" style="--rd:.1s">
+        <form id="ct-form" novalidate aria-label="Contact form">
+          <div class="field-row">
+            <div class="field">
+              <label for="ct-name">Name</label>
+              <div class="field-wrap">
+                <i class="ph-bold ph-user" aria-hidden="true"></i>
+                <input type="text" id="ct-name" name="name" placeholder="Your Name" required autocomplete="name" />
+              </div>
+              <span class="field-err" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="ct-email">Email</label>
+              <div class="field-wrap">
+                <i class="ph-bold ph-envelope" aria-hidden="true"></i>
+                <input type="email" id="ct-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+              </div>
+              <span class="field-err" role="alert"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="ct-subj">Subject</label>
+            <div class="field-wrap">
+              <i class="ph-bold ph-tag" aria-hidden="true"></i>
+              <input type="text" id="ct-subj" name="subject" placeholder="Project Inquiry" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="ct-msg">Message</label>
+            <div class="field-wrap field-wrap-ta">
+              <i class="ph-bold ph-chat-text" aria-hidden="true"></i>
+              <textarea id="ct-msg" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+            </div>
+            <span class="field-err" role="alert"></span>
+          </div>
+          <button type="submit" class="btn btn-lime btn-full" id="ct-submit" data-mag>
+            <i class="ph-bold ph-paper-plane-tilt" aria-hidden="true"></i>
+            <span>Send Message</span>
+          </button>
+          <div class="form-ok" id="ct-ok" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ╔══════════════════════════════════════╗
+     ║  FOOTER                             ║
+     ╚══════════════════════════════════════╝ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo" aria-label="Back to top">
+          <span class="logo-brace">{</span><span class="logo-init">AK</span><span class="logo-brace">}</span>
+        </a>
+        <p class="footer-tagline">Building the web, one commit at a time.</p>
+        <div class="footer-socials" aria-label="Social links">
+          <a href="https://github.com/abhi-gif488"   target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub"><i class="ph-bold ph-github-logo"></i></a>
+          <a href="https://www.linkedin.com/in/abhishek-kumar-775bb92ba/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a>
+          <a href="mailto:abhishekkumar06204@gmail.com" class="icon-btn" aria-label="Email"><i class="ph-bold ph-envelope"></i></a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h4 class="footer-nav-title">Navigate</h4>
+        <ul role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-info">
+        <h4 class="footer-nav-title">Contact</h4>
+        <ul role="list">
+          <li><i class="ph-bold ph-envelope" aria-hidden="true"></i><a href="mailto:abhishekkumar06204@gmail.com">abhishekkumar06204@gmail.com</a></li>
+          <li><i class="ph-bold ph-map-pin-line" aria-hidden="true"></i><span>Odisha, India</span></li>
+          <li><i class="ph-bold ph-github-logo" aria-hidden="true"></i><a href="https://github.com/abhi-gif488" target="_blank" rel="noopener noreferrer">github.com/abhishekkumar</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p> © 2026- Developed by
+          <a href="https://www.linkedin.com/in/abhishek-kumar-775bb92ba/" target="_blank">Abhishek Kumar</a>
+          | <a href="https://www.linkedin.com/in/abhishek-kumar-775bb92ba/" target="_blank">LinkedIn</a></p>
+      <button id="back-top" class="back-top-btn" aria-label="Back to top">
+        <i class="ph-bold ph-arrow-up" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast zone -->
+<div id="toast-zone" class="toast-zone" aria-live="polite" aria-atomic="true"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
